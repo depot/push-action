@@ -1,0 +1,23 @@
+name: Depot Push
+description: Push images to a remote registry.
+author: Depot
+branding:
+  icon: package
+  color: gray-dark
+runs:
+  using: node24
+  main: dist/index.js
+inputs:
+  build-id:
+    description: The build ID to push.
+    required: true
+  tags:
+    description: A list of tags to apply to the pushed image
+    required: false
+  token:
+    description: If set, will populate the `DEPOT_TOKEN` environment variable.
+    default: ''
+    required: false
+  target:
+    description: Push a specific bake target.
+    required: false
