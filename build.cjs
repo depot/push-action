@@ -4,6 +4,6 @@ esbuild.build({
   entryPoints: ['src/index.ts'],
   bundle: true,
   platform: 'node',
-  target: 'node24',
+  target: 'node20',
   outfile: 'dist/index.js',
 })
